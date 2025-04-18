@@ -5,11 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="./src/styles.css">
   <script src="./src/index.js" defer></script>
 </head>
 
 <body>
+  <h1>Валідація покупки алкоголю</h1>
+  <form id="purchase-form" autocomplete="off">
+    <label for="name">Введіть ваше ім'я:</label>
+    <input type="text" id="name" required>
 
+    <label for="age">Введіть ваш вік:</label>
+    <input type="number" id="age" required>
+    <button type="submit">Купити алкоголь</button>
+  </form>
+
+  <p id="purchase-message"></p>
 </body>
 
 </html>
