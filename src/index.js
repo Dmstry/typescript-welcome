@@ -1,57 +1,9 @@
-/*
-Задача 1.
-Дано масив чисел.
-Перебрати масив, знайти найбільше число.
-*/
-const numbers = [4, 2, 7, 1, 9, 5];
-let maxNumber = numbers[0];
-for (let i = 1; i < numbers.length; i++) {
-    if (numbers[i] > maxNumber) {
-        maxNumber = numbers[i];
-    }
-}
-// console.log('Найбільший елемент масиву: ', maxNumber);
-/*
-Задача 2.
-Дано масив чисел.
-Знайти середнє значення у цьому масиві чисел.
-*/
-const numbers2 = [10, 20, 30, 40, 50];
-let sum = 0;
-for (let num of numbers2) {
-    sum += num;
-}
-const avarage = sum / numbers2.length;
-// console.log('Середнє значення числе у масиві: ', avarage);
-/*
-Задача 3.
-Дано масив чисел.
-Знайти перше від'ємне число у масиві.
-*/
-const numbers3 = [10, -20, 30, -40, 50];
-let firstNegative;
-for (let num of numbers3) {
-    if (num < 0) {
-        firstNegative = num;
-        break;
-    }
-}
-const item = { name: 'Футболка', price: 20 };
-const discount = 10; // 10% знижки
-const discountAmount = (discount / 100) * item.price;
-const totalCost = item.price - discountAmount;
-const john = { name: 'John', hourlyRate: 10 };
-const johnAmount = john.hourlyRate * 40; // сумма зарплати, яка виплачується Джону
-const invoice = { name: john.name, amount: johnAmount };
-const books = [
-    { title: 'Грокаємо алгоритми', author: 'Адітья Бхаргва', price: 25 },
-    { title: 'Мова програмування C++', author: 'Бьерн Страуструп', price: 20 },
-    {
-        title: 'Гаррі Поттер і філософський камінь',
-        author: 'Джоан Роулінг',
-        price: 10,
-    },
-];
-for (let book of books) {
-    console.log(`Книга: ${book.title}. Автор: ${book.author}. Ціна: ${book.price}$.`);
-}
+var AccessLevel;
+(function (AccessLevel) {
+    AccessLevel["Guest"] = "\u0413\u0456\u0441\u0442\u044C";
+    AccessLevel["User"] = "\u041A\u043E\u0440\u0438\u0441\u0442\u0443\u0432\u0430\u0447";
+    AccessLevel["Moderator"] = "\u041C\u043E\u0434\u0435\u0440\u0430\u0442\u043E\u0440";
+    AccessLevel["Admin"] = "\u0410\u0434\u043C\u0456\u043D\u0456\u0441\u0442\u0440\u0430\u0442\u043E\u0440";
+})(AccessLevel || (AccessLevel = {}));
+const currentLevel = AccessLevel.Moderator;
+console.log(`Ваш рівень доступу: ${currentLevel}`);
